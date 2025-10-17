@@ -6,9 +6,9 @@ package edu.tiago.simuladorRPG.model;
  */
 public enum Equipamento {
     // Cabeçais
-    ELMO_DA_IGNORANCIA_GLORIOSA("Elmo da Ignorância Gloriosa", 1, TipoEquipamento.CABECAL),
-    CHAPEU_PONTUDO_DE_TRES_PONTAS("Chapéu Pontudo de Três Pontas", 2, TipoEquipamento.CABECAL),
-    BANDANA_DA_FORCA_BRUTA("Bandana da Força Bruta (e Pouca Inteligência)", 3, TipoEquipamento.CABECAL),
+    ELMO_DA_IGNORANCIA_GLORIOSA("Elmo da Ignorância Gloriosa", 1, TipoEquipamento.CABECA),
+    CHAPEU_PONTUDO_DE_TRES_PONTAS("Chapéu Pontudo de Três Pontas", 2, TipoEquipamento.CABECA),
+    BANDANA_DA_FORCA_BRUTA("Bandana da Força Bruta (e Pouca Inteligência)", 3, TipoEquipamento.CABECA),
 
     // Armaduras
     ARMADURA_DE_COURO_FALSO("Armadura de Couro Falso", 1, TipoEquipamento.ARMADURA),
@@ -41,7 +41,7 @@ public enum Equipamento {
 
     private final String nome;
     private final int bonus;
-    private final TipoEquipamento tipo;
+    private TipoEquipamento tipo;
 
     Equipamento(String nome, int bonus, TipoEquipamento tipo) {
         this.nome = nome;
@@ -59,5 +59,9 @@ public enum Equipamento {
 
     public TipoEquipamento getTipo() {
         return tipo;
+    }
+
+    public void setTipo(TipoEquipamento tipo) {
+        this.tipo = tipo;
     }
 }

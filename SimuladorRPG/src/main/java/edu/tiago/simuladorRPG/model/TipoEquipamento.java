@@ -5,7 +5,7 @@ package edu.tiago.simuladorRPG.model;
  */
 
 public enum TipoEquipamento {
-    CABECAL,      // Headgear
+    CABECA,      // Headgear
     ARMADURA,     // Armor
     CALCADO,      // Footgear
     MAO,          // Hand (para armas de 1 ou 2 mãos)

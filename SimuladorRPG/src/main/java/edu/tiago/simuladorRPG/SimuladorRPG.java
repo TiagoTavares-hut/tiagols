@@ -6,6 +6,8 @@ package edu.tiago.simuladorRPG;
 
 import edu.tiago.simuladorRPG.model.Equipamento;
 import edu.tiago.simuladorRPG.model.Monstro;
+import edu.tiago.simuladorRPGclass.Jogador;
+import java.util.ArrayList;
 
 /**
  *
@@ -18,8 +20,20 @@ public class SimuladorRPG extends javax.swing.JFrame {
     /**
      * Creates new form Principal
      */
+    public Jogador jogador;
+    public ArrayList<Equipamento> equipamento;
+    public ArrayList<Monstro> montros;
     public SimuladorRPG() {
         initComponents();
+        
+        jogador = new Jogador();
+        jogador.setNivel(1);
+        equipamentos = (ArrayList<Equipamento>)
+        
+        
+        
+        
+        
         
                 // Pega um monstro específico do enum
         Monstro monstroDaVez = Monstro.ORC_DE_TELEMARKETING;

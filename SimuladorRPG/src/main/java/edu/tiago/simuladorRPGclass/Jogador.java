@@ -1,10 +1,8 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package edu.tiago.simuladorRPGclass;
 
-import java.awt.List;
+import edu.tiago.simuladorRPG.model.TipoEquipamento;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
@@ -18,8 +16,14 @@ public class Jogador {
     private Equipamento peitoral;
     private Equipamento calca;
     private Equipamento sapato;
+    private List<Equipamento> inventario;
 
-    
+    public Jogador() {
+        this.nivel = 1;
+        this.inventario = new ArrayList<>();
+    }
+
+    // Getters e setters básicos
     public int getNivel() {
         return nivel;
     }
@@ -38,10 +42,6 @@ public class Jogador {
 
     public Equipamento getCabeca() {
         return cabeca;
-    }
-
-    public void setCabeca(Equipamento cabeca) {
-        this.cabeca = cabeca;
     }
 
     public Equipamento getPeitoral() {
@@ -67,12 +67,22 @@ public class Jogador {
     public void setSapato(Equipamento sapato) {
         this.sapato = sapato;
     }
-    
-    public boolean setCabeca (Equipamento cabeca) {
-        if(cabeca.getTipo() == TipoEquipamento.CABECAL){
-            this.cabeca = cabeca;
-            return true;
-        }else{
-        
+
+    public List<Equipamento> getInventario() {
+        return inventario;
+    }
+
+    // Adiciona um item ao inventário
+    public void adicionarEquipamento(Equipamento equipamento) {
+        inventario.add(equipamento);
+    }
+
+    // Define equipamento na cabeça (validação do tipo)
+    public boolean setCabeca(Equipamento cabeca) {
+    if (cabeca.getTipo() == TipoEquipamento.CABECA) {
+        this.cabeca = cabeca;
+        return true;
+    }
+    return false;
     }
 }
